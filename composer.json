@@ -1,0 +1,25 @@
+{
+    "name" : "parallalax/synchro-bundle",
+    "description" : "",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "ParallalaxStudio",
+        "email" : "contact@parallalaxstudio.fr"
+    }],
+    "license" : [
+        "MIT"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Parallalax\\SynchroBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Parallalax\\SynchroBundle\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.1.3"
+    }
+}
