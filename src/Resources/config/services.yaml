@@ -1,0 +1,6 @@
+services:
+    Parallalax\SynchroBundle\Controller\:
+        resource: '../../Controller/'
+        tags: [ 'controller.service_arguments' ]
+        calls:
+            - setContainer: ['@service.container']
