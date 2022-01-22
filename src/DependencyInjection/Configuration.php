@@ -19,10 +19,14 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder('parallalax_synchro');
 
+        $rootNode = method_exists($treeBuilder, "getRootNode")
+            ? $treeBuilder->getRootNode()
+            : $treeBuilder->root("parallalax_synchro");
+
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
-        $treeBuilder->getRootNode()
+        $rootNode
             ->children()
                 ->scalarNode('user')->defaultValue('api_user')->info('Parallalax API User')->end()
                 ->scalarNode('password')->isRequired()->info('Parallalax API Password')->end()

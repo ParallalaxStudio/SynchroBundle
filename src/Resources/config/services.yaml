@@ -3,4 +3,4 @@ services:
         resource: '../../Controller/'
         tags: [ 'controller.service_arguments' ]
         calls:
-            - setContainer: ['@service_container']
+            - ['setContainer', ['@service_container']]
